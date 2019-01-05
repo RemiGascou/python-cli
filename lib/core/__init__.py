@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from lib.CommandManager import *
-from lib.CLI import *
+from lib.core.CLI import *
+from lib.core.CommandManager import *
+from lib.core.Completer import *

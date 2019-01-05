@@ -9,5 +9,12 @@ def get_version() -> str:
 def get_credits() -> str:
     return "© Rémi GASCOU 2016-2018"
 
+def get_helpmessage() -> str:
+    helpmessage = """This is helpmessage :"""
+    helpmessage += """\n    - help : Displays this message."""
+    helpmessage += """\n    - ?    : Displays this message."""
+    helpmessage += """\n    - exit : Exits the CLI."""
+    return helpmessage
+
 def get_motd() -> str:
     return """\n        ////////   //         ////////\n       //         //            //\n      //         //            //\n     //         //            //\n    ////////   ////////   ////////  """ + get_version() + """\n"""

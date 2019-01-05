@@ -2,11 +2,11 @@ import os
 import re
 import readline
 
-COMMANDS = ['extra', 'extension', 'stuff', 'errors',
-            'email', 'foobar', 'foo']
+COMMANDS = ['extra', 'extension', 'stuff', 'errors', 'email', 'foobar', 'foo']
 RE_SPACE = re.compile('.*\s+$', re.M)
 
 class Completer(object):
+
     def _listdir(self, root):
         "List directory 'root' appending the path separator to subdirs."
         res = []
@@ -44,7 +44,7 @@ class Completer(object):
     def complete(self, text, state):
         "Generic readline completion entry point."
         buffer = readline.get_line_buffer()
-        line = readline.get_line_buffer().split()
+        line   = readline.get_line_buffer().split()
         # show all commands
         if not line:
             return [c + ' ' for c in COMMANDS][state]
@@ -68,4 +68,4 @@ if __name__ == '__main__':
     readline.set_completer_delims(' \t\n;')
     readline.parse_and_bind("tab: complete")
     readline.set_completer(comp.complete)
-    raw_input('Enter section name: ')
+    input('Enter section name: ')
